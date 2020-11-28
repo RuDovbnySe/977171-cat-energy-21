@@ -120,42 +120,48 @@
         <div class="container program">
           <h1 class="program__title">Подбор программы</h1>
           <p class="program__text">Заполните анкету и мы подберем  программу питания для вашего кота</p>
-          <form class="question" action="https://echo.htmlacademy.ru" method="post">
+          <form class="program__form question" action="https://echo.htmlacademy.ru" method="post">
             <div class="question__row">
               <div class="question__column">
-                <fieldset class="question__field">
-                  <label class="form-field">
-                    <span class="form-field__text">Имя:*</span>
-                    <input class="form-field__control" type="text" placeholder="Барсик" required>
+                <fieldset class="question__wrapper question__wrapper--input">
+                  <label class="question__form">
+                    <span class="question__form--text">Имя:*</span>
+                    <input class="question__form--control" type="text" placeholder="Барсик" required>
                   </label>
-                  <label class="form-field">
-                    <span class="form-field__text">Вес (кг):*</span>
-                    <input class="form-field__control" type="text" placeholder="7" required>
+                  <label class="question__form">
+                    <span class="question__form--text">Вес (кг):*</span>
+                    <input class="question__form--control" type="text" placeholder="7" required>
                   </label>
-                  <label class="form-field">
-                    <span class="form-field__text">Возраст (лет):</span>
-                    <input class="form-field__control" type="text" placeholder="7">
+                  <label class="question__form">
+                    <span class="question__form--text">Возраст (лет):</span>
+                    <input class="question__form--control" type="text" placeholder="7">
                   </label>
                 </fieldset>
               </div>
-              <div class="question__column">
-                <fieldset class="question__field question__field--line">
-                  <input type="radio" id="radio-1" name="choice" checked>
-                  <label class="form-type form-type--radio" for="radio-1" tabindex="0">Похудение</label>
-                  <input type="radio" id="radio-2" name="choice">
-                  <label class="form-type form-type--radio" for="radio-2" tabindex="0">Набор массы</label>
-                  <input type="radio" id="radio-3" name="choice">
-                  <label class="form-type form-type--radio" for="radio-3" tabindex="0">Не знаю (Нужен ваш совет)</label>
+                <fieldset class="question__wrapper question__wrapper--radio">
+                  <div class="question__row">
+                    <div class="question__column">
+                      <input type="radio" id="radio-1" name="choice" checked>
+                      <label class="question__radio" for="radio-1" tabindex="0">Похудение</label>
+                    </div>
+                    <div class="question__row">
+                      <input type="radio" id="radio-2" name="choice">
+                      <label class="question__radio" for="radio-2" tabindex="0">Набор массы</label>
+                    </div>
+                    <div class="question__row">
+                      <input type="radio" id="radio-3" name="choice">
+                      <label class="question__radio" for="radio-3" tabindex="0">Не знаю (Нужен ваш совет)</label>
+                    </div>
+                  </div>
                 </fieldset>
               </div>
-            </div>
-            <fieldset class="question__field">
-              <h3 class="title-line title-line--width">Контактные данные (владельца кота)</h3>
+            <fieldset class="question__wrapper cat-contact">
+              <h3 class="cat-contact__tittle">Контактные данные (владельца кота)</h3>
               <div class="question__row">
                 <div class="question__column">
-                  <label class="form-field form-field--ident">
-                    <span class="form-field__text">E-mail:*</span>
-                    <input class="form-field__control form-field__control--icon" type="email" placeholder="kuklachev@gmail.com" required>
+                  <label class="question__form">
+                    <span class="question__form--text">E-mail:*</span>
+                    <input class="question__form--control question__form--icon" type="email" placeholder="kuklachev@gmail.com" required>
                     <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <line x1="1.65" y1="5.71997" x2="1.65" y2="13.72" stroke="#222222" stroke-width="1.3"/>
                       <line x1="18.65" y1="5.71997" x2="18.65" y2="13.72" stroke="#222222" stroke-width="1.3"/>
@@ -166,9 +172,9 @@
                   </label>
                 </div>
                 <div class="question__column">
-                  <label class="form-field">
-                    <span class="form-field__text">Телефон:*</span>
-                    <input class="form-field__control form-field__control--icon" type="tel" placeholder="8 (960) 900-60-90" required>
+                  <label class="question__form">
+                    <span class="question__form--text">Телефон:*</span>
+                    <input class="question__form--control question__form--icon" type="tel" placeholder="8 (960) 900-60-90" required>
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <g clip-path="url(#clip0)">
                         <path d="M17.9 9.4H9.39999V10.6H17.9L15.8 12.7L16.7 13.6L19.8 10.5C19.8974 10.3702 19.95 10.2123 19.95 10.05C19.95 9.88772 19.8974 9.72982 19.8 9.6L16.7 6.5L15.8 7.4L17.9 9.4Z" fill="black"/>
@@ -184,34 +190,34 @@
                 </div>
               </div>
             </fieldset>
-            <div class="question__field">
-              <label class="title-line" for="for-textarea">Комментарий</label>
-              <textarea class="question__textarea" rows="8" id="for-textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
-            </div>
-            <fieldset class="question__field">
-              <h3 class="title-line">Дополнительно</h3>
+            <fieldset class="question__wrapper commentary">
+              <label class="commentary__text" for="for-textarea">Комментарий</label>
+              <textarea class="commentary__text--field" rows="8" id="for-textarea" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </fieldset>
+            <fieldset class="question__wrapper extra">
+              <h3 class="extra__tittle">Дополнительно</h3>
               <div class="question__row">
                 <div class="question__column">
                   <input type="checkbox" id="check-1" checked>
-                  <label class="form-type form-type--check" for="check-1" tabindex="0">Сахарозаменитель</label>
+                  <label class="question__check" for="check-1" tabindex="0">Сахарозаменитель</label>
                 </div>
                 <div class="question__column">
                   <input type="checkbox" id="check-2">
-                  <label class="form-type form-type--check" for="check-2" tabindex="0">Питьевая вода</label>
+                  <label class="question__check" for="check-2" tabindex="0">Питьевая вода</label>
                 </div>
                 <div class="question__column">
                   <input type="checkbox" id="check-3">
-                  <label class="form-type form-type--check" for="check-3" tabindex="0">Молоко</label>
+                  <label class="question__check" for="check-3" tabindex="0">Молоко</label>
                 </div>
                 <div class="question__column">
                   <input type="checkbox" id="check-4">
-                  <label class="form-type form-type--check" for="check-4" tabindex="0">Витамины</label>
+                  <label class="question__check" for="check-4" tabindex="0">Витамины</label>
                 </div>
               </div>
             </fieldset>
             <div class="question__row">
               <div class="question__column">
-                <button class="btn question__btn">Отправить заявку</button>
+                <button class="btn btn--color">Отправить заявку</button>
               </div>
               <div class="question__column">
                 <p class="question__text"><sup>*</sup>— Обязательные поля</p>
@@ -219,20 +225,17 @@
             </div>
           </form>
         </div>
-      <section class="invitation invitation--catalog">
-        <div class="container">
+      <section class="invitation">
+        <div class="container invitation__box">
           <h2 class="invitation__title">Приглашаем к сотрудничеству  дилеров!</h2>
-          <p class="invitation__text">ул. Большая Конюшенная, д. 19/8
-            <span>Санкт-Петербург</span>
-          </p>
+          <div class="invitation__text">
+            <p class="invitation__street">ул. Большая Конюшенная, д. 19/8</p>
+            <p class="invitation__city">Санкт-Петербург</p>
+          </div>
         </div>
       </section>
       <div class="invitation__map map">
-        <div class="container">
-          <div class="map__iframe">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123688!2d30.320894615651014!3d59.93879686904841!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1523735281602"  allowfullscreen></iframe>
-          </div>
-        </div>
+        <div class="map__iframe"></div>
       </div>
       </main>
     <footer class="page-footer">
