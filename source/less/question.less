@@ -1,4 +1,64 @@
-.add-products {
-  // заглушка, чтобы удалить ошибку из npm test
-  color: @basic-green;
+.question {
+  &__form {
+    display: flex;
+    justify-content: space-between;
+
+    &__text {
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 112%;
+
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
+      color: @special_dark-grey;
+    }
+
+    &--control {
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 112%;
+      text-transform: uppercase;
+      color: @special_dark-grey;
+    }
+  }
+}
+
+.cat-contact {
+  &__tittle {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 108%;
+    color: @basic-black;
+  }
+}
+
+.commentary {
+  display: grid;
+
+  &__text {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 108%;
+    color: @basic-black;
+  }
+}
+
+.extra {
+  &__tittle {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 108%;
+    color: @basic-black;
+  }
 }
