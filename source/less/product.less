@@ -1,4 +1,48 @@
-.add-products {
-  // заглушка, чтобы удалить ошибку из npm test
-  color: @basic-green;
+.product {
+  &__title {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 125%;
+    text-transform: uppercase;
+    color: @special_dark-grey-2;
+  }
+
+  &__options-cell {
+    font-size: 12px;
+    line-height: 133%;
+    text-align: center;
+    color: @special_dark-grey;
+  }
+
+  &-more {
+    &__title {
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 125%;
+      text-align: center;
+      text-transform: uppercase;
+      color: @basic-black;
+    }
+
+    &__text {
+      font-size: 12px;
+      line-height: 133%;
+      text-align: center;
+      color: @special_dark-grey;
+    }
+
+    &__item {
+      list-style: none;
+    }
+
+    &__info-cell {
+      font-size: 14px;
+      line-height: 100%;
+      color: @special_dark-grey;
+    }
+  }
 }
