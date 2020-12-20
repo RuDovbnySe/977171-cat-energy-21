@@ -9,8 +9,20 @@
 }
 
 .page-footer {
-  display: grid;
-  justify-items: center;
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    height: 236px;
+
+    @media (min-width: @tablet) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 150px;
+    }
+  }
 }
 
 .developer {

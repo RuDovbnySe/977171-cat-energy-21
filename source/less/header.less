@@ -1,4 +1,119 @@
-.add-products {
-  // заглушка, чтобы удалить ошибку из npm test
-  color: @basic-green;
+.header {
+  align-items: center;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+    margin-bottom: 62px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 53px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+
+    @media (max-width: @mobile) {
+      margin-top: 12px;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__logo--mobile,
+  &__logo--tablet,
+  &__logo--desktop {
+    display: none;
+  }
+
+  @media (max-width: @mobile) {
+    &__logo--mobile {
+      display: block;
+    }
+
+    &__logo--tablet,
+    &__logo--desktop {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    &__logo--tablet {
+      display: block;
+    }
+
+    &__logo--mobile,
+    &__logo--desktop {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &__logo--desktop {
+      display: block;
+    }
+
+    &__logo--mobile,
+    &__logo--tablet {
+      display: none;
+    }
+  }
+
+  &__toggle,
+  &__toggle--close {
+    @media (min-width: @tablet) {
+      display: none;
+    }
+  }
+
+  &__nav {
+    @media (max-width: @mobile) {
+      display: none;
+    }
+
+    &--show {
+      display: block;
+    }
+  }
+}
+
+.site-list {
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+  margin: 0;
+  gap: 35px;
+
+  @media (min-width: @tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__item {
+    list-style: none;
+    text-align: center;
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    text-transform: uppercase;
+
+    color: @basic-black;
+
+    @media (max-width: @mobile) {
+      border-top: 1px solid @grey-line;
+      padding-top: 22px;
+      margin-bottom: 24px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
 }
