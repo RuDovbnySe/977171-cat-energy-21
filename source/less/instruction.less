@@ -3,7 +3,7 @@
     font-family: "Oswald", "Arial", sans-serif;
     font-size: 36px;
     line-height: 111%;
-    text-align: center;
+    text-align: start;
     color: @basic-black;
   }
 
@@ -21,6 +21,15 @@
   &__list {
     list-style: none;
     padding-left: inherit;
+
+    @media (min-width: @tablet) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: @desktop) {
+      display: flex;
+    }
   }
 
   &__illustration {

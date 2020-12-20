@@ -1,33 +1,82 @@
-.diet__wrapper {
-  background-color: @basic-grey;
-  margin-top: 22px;
-}
+.diet {
+  @media (min-width: @desktop) {
+    display: flex;
+    gap: 80px;
+  }
 
-.diet__tittle {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  line-height: 154%;
-  text-transform: uppercase;
+  &__nutrition {
+    background-color: @basic-grey;
+    margin-top: 22px;
+    display: flex;
+  }
 
-  color: @basic-black;
-}
+  &__tittle {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 154%;
+    text-transform: uppercase;
 
-.diet__text {
-  font-size: 14px;
-  line-height: 129%;
-  color: @special_dark-grey;
-}
+    color: @basic-black;
+  }
 
-.diet__catalog-tittle {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 100%;
-  text-align: center;
-  text-transform: uppercase;
+  &__text {
+    font-size: 14px;
+    line-height: 129%;
+    color: @special_dark-grey;
+  }
 
-  color: @basic-black;
+  &__catalog {
+    &-tittle {
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 100%;
+      text-align: center;
+      text-transform: uppercase;
+
+      color: @basic-black;
+
+      @media (max-width: @mobile) {
+        margin-right: 17px;
+      }
+
+      @media (min-width: @tablet) {
+        margin-right: 25px;
+      }
+
+      @media (min-width: @desktop) {
+        margin-right: 27px;
+      }
+    }
+
+    &-link {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+  }
+
+  &__img {
+    border-radius: 50%;
+    background-color: #68b738;
+
+    @media (max-width: @mobile) {
+      width: 53px;
+      height: 53px;
+    }
+
+    @media (min-width: @tablet) {
+      width: 211px;
+      height: 211px;
+      order: 2;
+    }
+
+    @media (min-width: @desktop) {
+      width: 106px;
+      height: 106px;
+    }
+  }
 }

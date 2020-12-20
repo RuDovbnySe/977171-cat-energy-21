@@ -1,31 +1,99 @@
-.comparison__img {
-  &--before {
-    background-image: url("../img/before-mobile@1x.png");
-    background-repeat: no-repeat;
-    width: 311px;
-    height: 322px;
-    display: none;
+.comparison {
+  width: 100%;
+
+  &__img {
+    &--before {
+      background-image: url("../img/before-mobile@1x.png");
+      background-repeat: no-repeat;
+      width: 311px;
+      height: 322px;
+      display: none;
+
+      @media (min-width: @tablet) {
+        display: block;
+        background-image: url("../img/before-tablet@1x.png");
+        width: 345px;
+        height: 517px;
+      }
+    }
+
+    &--after {
+      background-image: url("../img/after-mobile@1x.png");
+      background-repeat: no-repeat;
+      width: 311px;
+      height: 322px;
+      display: none;
+
+      @media (min-width: @tablet) {
+        display: block;
+        background-image: url("../img/after-tablet@1x.png");
+        width: 345px;
+        height: 517px;
+        background-position: right;
+      }
+    }
+
+    &--active {
+      @media (max-width: @mobile) {
+        display: block;
+      }
+    }
   }
 
-  &--after {
-    background-image: url("../img/after-mobile@1x.png");
-    background-repeat: no-repeat;
-    width: 311px;
-    height: 322px;
-    display: none;
+  &__btn {
+    font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 125%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #000000;
   }
 
-  &--active {
-    display: block;
+  &__range {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__progress {
+    width: 84px;
+    height: 14px;
+    border-radius: 6px;
+    background-color: @basic-white;
+  }
+
+  &__toggle {
+    background-color: @basic-green;
+    width: 35px;
+    height: 6px;
+    border-radius: 6px;
+    display: flex;
+    align-items: start;
+    margin: 4px 6px;
   }
 }
 
 .example {
+  &__comparison--img {
+    @media (min-width: @tablet) {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
   &__tittle {
     font-family: "Oswald", "Arial", sans-serif;
     font-size: 36px;
     line-height: 111%;
-    text-align: center;
+    text-align: start;
     color: @basic-black;
   }
 
@@ -67,6 +135,16 @@
     text-align: center;
     color: @basic-black;
   }
+
+  &__result {
+    @media (min-width: @tablet) {
+      display: flex;
+    }
+
+    @media (min-width: @desktop) {
+      display: block;
+    }
+  }
 }
 
 .result__total--expenses {
@@ -76,44 +154,4 @@
   text-align: center;
   text-transform: uppercase;
   color: @basic-black;
-}
-
-.comparison {
-  &__btn {
-    font-family: "Oswald", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 125%;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
-
-    color: #000000;
-  }
-
-  &__range {
-    display: flex;
-    width: 288px;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__progress {
-    width: 84px;
-    height: 14px;
-    border-radius: 6px;
-    background-color: @basic-white;
-  }
-
-  &__toggle {
-    background-color: @basic-green;
-    width: 35px;
-    height: 6px;
-    border-radius: 6px;
-    display: flex;
-    align-items: start;
-    margin: 4px 6px;
-  }
 }

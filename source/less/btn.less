@@ -8,9 +8,13 @@
   justify-content: center;
   text-transform: uppercase;
   text-decoration: none;
-  width: 100%;
+  width: 280px;
   padding-top: 9px;
   padding-bottom: 9px;
+
+  @media (min-width: @tablet) {
+    width: 244px;
+  }
 
   &--light {
     color: @special_dark-grey;
@@ -20,5 +24,13 @@
   &--color {
     color: @basic-white;
     background-color: @basic-green;
+  }
+
+  &--promo {
+    @media (min-width: @tablet) {
+      position: absolute;
+      top: 210px;
+      left: 117px;
+    }
   }
 }
