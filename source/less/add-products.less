@@ -5,9 +5,13 @@
     font-weight: normal;
     font-size: 24px;
     line-height: 100%;
-    text-align: center;
+    text-align: start;
 
     color: @basic-black;
+
+    @media (min-width: @tablet) {
+      font-size: 36px;
+    }
   }
 
   &__proviso {
@@ -16,11 +20,37 @@
     display: flex;
     align-items: center;
     text-align: center;
-
     color: @basic-white;
+  }
 
-    background-image: url("../img/index-background-mobile 1.png");
+  &__action {
+    width: 100%;
+
+    background-image: url("../img/gift-photo-mobile@1x.jpg");
     height: 437px;
     background-repeat: no-repeat;
+
+    @media (min-width: @tablet) {
+      background-image: url("../img/gift-photo-tablet@1x.jpg");
+      height: 200px;
+    }
+
+    @media (min-width: @desktop) {
+      background-image: url("../img/gift-photo-desktop@1x.jpg");
+      height: 289px;
+      width: 245px;
+    }
+  }
+
+  &__gift {
+    margin-top: 57px;
+    margin-left: calc(50% - 39px);
+  }
+
+  &__row {
+    @media (min-width: @desktop) {
+      display: flex;
+      gap: 80px;
+    }
   }
 }

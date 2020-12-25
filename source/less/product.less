@@ -1,19 +1,47 @@
 .product {
   &__title {
-    font-family: "Oswald", "Arial", sans-serif;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 125%;
-    text-transform: uppercase;
-    color: @special_dark-grey-2;
+    &--text {
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 125%;
+      text-transform: uppercase;
+      color: @special_dark-grey-2;
+
+      @media (min-width: @tablet) {
+        font-size: 20px;
+        line-height: 120%;
+      }
+
+      @media (min-width: @desktop) {
+        line-height: 105%;
+      }
+    }
   }
 
-  &__options-cell {
-    font-size: 12px;
-    line-height: 133%;
-    text-align: center;
-    color: @special_dark-grey;
+  &__options {
+    width: 100%;
+
+    &-cell {
+      font-size: 12px;
+      line-height: 133%;
+      text-align: center;
+      color: @special_dark-grey;
+
+      @media (min-width: @tablet) {
+        font-size: 16px;
+        line-height: 100%;
+      }
+
+      &--tittle {
+        text-align: start;
+      }
+
+      &--value {
+        text-align: end;
+      }
+    }
   }
 
   &-more {
@@ -23,9 +51,14 @@
       font-weight: normal;
       font-size: 16px;
       line-height: 125%;
-      text-align: center;
+      text-align: start;
       text-transform: uppercase;
       color: @basic-black;
+
+      @media (min-width: @tablet) {
+        font-size: 20px;
+        line-height: 100%;
+      }
     }
 
     &__text {
@@ -39,10 +72,57 @@
       list-style: none;
     }
 
-    &__info-cell {
-      font-size: 14px;
-      line-height: 100%;
-      color: @special_dark-grey;
+    &__info {
+      width: 100%;
+
+      &-cell {
+        font-size: 12px;
+        line-height: 133%;
+        color: @special_dark-grey;
+
+        @media (min-width: @tablet) {
+          font-size: 16px;
+          line-height: 100%;
+        }
+
+        @media (min-width: @desktop) {
+          line-height: 125%;
+        }
+
+        &--quantity {
+          text-align: start;
+        }
+
+        &--price {
+          text-align: end;
+        }
+      }
+    }
+
+    &__list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    &__wrapper {
+      @media (min-width: @tablet) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    &__column {
+      width: 100%;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media (min-width: @tablet) {
+      display: block;
+      text-align: center;
     }
   }
 }

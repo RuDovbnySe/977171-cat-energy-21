@@ -6,5 +6,31 @@
     font-size: 36px;
     line-height: 100%;
     color: @basic-black;
+
+    @media (min-width: @tablet) {
+      font-size: 60px;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+
+    @media (min-width: @tablet) {
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
+
+    @media (min-width: @desktop) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 80px;
+    }
+  }
+
+  &__item {
+    text-align: center;
+
+    @media (min-width: @tablet) {
+      background-color: @basic-grey;
+    }
   }
 }
