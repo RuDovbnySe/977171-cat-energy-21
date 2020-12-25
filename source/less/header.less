@@ -76,6 +76,16 @@
       display: none;
     }
 
+    @media (min-width: @tablet) {
+      margin-left: -69px;
+      margin-right: -40px;
+    }
+
+    @media (min-width: @desktop) {
+      margin-left: -69px;
+      margin-right: 40px;
+    }
+
     &--show {
       display: block;
     }
@@ -87,7 +97,7 @@
   flex-direction: column;
   padding-left: 0;
   margin: 0;
-  gap: 35px;
+  gap: 33px;
 
   @media (min-width: @tablet) {
     flex-direction: row;
@@ -110,6 +120,11 @@
       border-top: 1px solid @grey-line;
       padding-top: 22px;
       margin-bottom: 24px;
+    }
+
+    @media (min-width: @tablet) {
+      font-size: 18px;
+      line-height: 133%;
     }
 
     a {

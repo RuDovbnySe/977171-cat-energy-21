@@ -1,4 +1,6 @@
 .invitation {
+  position: relative;
+
   &__title {
     font-family: "Oswald", "Arial", sans-serif;
     font-size: 16px;
@@ -7,6 +9,11 @@
     color: @basic-black;
     width: 50%;
     margin: 0;
+
+    @media (min-width: @desktop) {
+      text-align: start;
+      margin-top: 65px;
+    }
   }
 
   &__text {
@@ -14,9 +21,17 @@
     font-size: 14px;
     line-height: 143%;
     color: @special_dark-grey;
-    display: block;
     width: 50%;
     margin: 0;
+
+    @media (min-width: @tablet) {
+      text-align: end;
+    }
+
+    @media (min-width: @desktop) {
+      text-align: start;
+      margin-top: 65px;
+    }
   }
 
   &__street,
@@ -45,5 +60,18 @@
 
   &__box {
     display: flex;
+
+    @media (min-width: @desktop) {
+      position: absolute;
+      top: 55px;
+      left: 110px;
+      background-color: @basic-white;
+      width: 510px;
+      height: 201px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-left: 76px;
+    }
   }
 }

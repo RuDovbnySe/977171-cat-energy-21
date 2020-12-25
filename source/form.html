@@ -123,7 +123,7 @@
           <h1 class="program__title">Подбор программы</h1>
           <p class="program__text">Заполните анкету и мы подберем  программу питания для вашего кота</p>
           <form class="program__form question" action="https://echo.htmlacademy.ru" method="post">
-            <div class="question__row">
+            <div class="question__block">
               <div class="question__column">
                 <fieldset class="question__wrapper question__wrapper--input">
                   <label class="question__form">
@@ -146,11 +146,11 @@
                       <input type="radio" id="radio-1" name="choice" checked>
                       <label class="question__radio" for="radio-1" tabindex="0">Похудение</label>
                     </div>
-                    <div class="question__row">
+                    <div class="question__column">
                       <input type="radio" id="radio-2" name="choice">
                       <label class="question__radio" for="radio-2" tabindex="0">Набор массы</label>
                     </div>
-                    <div class="question__row">
+                    <div class="question__column">
                       <input type="radio" id="radio-3" name="choice">
                       <label class="question__radio" for="radio-3" tabindex="0">Не знаю (Нужен ваш совет)</label>
                     </div>
@@ -159,7 +159,7 @@
               </div>
             <fieldset class="question__wrapper cat-contact">
               <h3 class="cat-contact__tittle">Контактные данные (владельца кота)</h3>
-              <div class="question__row">
+              <div class="question__block">
                 <div class="question__column">
                   <label class="question__form">
                     <span class="question__form--text">E-mail:*</span>
@@ -198,7 +198,7 @@
             </fieldset>
             <fieldset class="question__wrapper extra">
               <h3 class="extra__tittle">Дополнительно</h3>
-              <div class="question__row">
+              <div class="question__block extra__wrapper">
                 <div class="question__column">
                   <input type="checkbox" id="check-1" checked>
                   <label class="question__check" for="check-1" tabindex="0">Сахарозаменитель</label>
@@ -217,7 +217,7 @@
                 </div>
               </div>
             </fieldset>
-            <div class="question__row">
+            <div class="question__row question__btn">
               <div class="question__column">
                 <button class="btn btn--color">Отправить заявку</button>
               </div>
