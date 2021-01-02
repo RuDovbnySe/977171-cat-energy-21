@@ -1,17 +1,25 @@
 .promo {
+  margin-top: 23px;
+
   @media (max-width: @mobile) {
     background-image: url("../img/index-background-mobile 1.png");
     background-repeat: no-repeat;
-    margin-left: auto;
-    margin-right: auto;
+    background-position-x: center;
   }
 
-  @media (min-width: @desktop) {
+  @media (min-width: @desktop-min) {
     background-image: url("../img/index-background-desktop@1x.jpg");
-    width: 100%;
+    width: auto;
     height: 696px;
     background-repeat: no-repeat;
     background-position: right;
+    margin-top: -174px;
+    z-index: -1;
+    //margin-right: -30px;
+  }
+
+  @media (min-width: @desktop) {
+    //margin-right: -110px;
   }
 
   position: relative;
@@ -23,16 +31,27 @@
     font-size: 36px;
     line-height: 100%;
     text-align: center;
+    color: @basic-black;
+    min-width: 249px;
+    padding-top: 27px;
 
-    color: @basic-white;
+    @media (max-width: @mobile) {
+      color: @basic-white;
+    }
 
     @media (min-width: @tablet) {
-      color: @basic-black;
       font-size: 60px;
       line-height: 100%;
-      margin-left: 97px;
-      margin-right: 217px;
+      margin-left: 87px;
+      margin-right: 87px;
       align-content: start;
+    }
+
+    @media (min-width: @desktop-min) {
+      max-width: 414px;
+      text-align: start;
+      margin-left: 80px;
+      padding-top: 223px;
     }
   }
 
@@ -43,14 +62,27 @@
     font-size: 14px;
     line-height: 100%;
     text-transform: uppercase;
+    text-align: center;
+    min-width: 198px;
+    padding-top: 25px;
+    margin: 0;
 
     color: @basic-white;
 
     @media (min-width: @tablet) {
       margin-left: 97px;
+      margin-right: 97px;
+      margin-bottom: 20px;
       color: @basic-black;
       font-size: 20px;
       line-height: 100%;
+    }
+
+    @media (min-width: @desktop-min) {
+      max-width: 414px;
+      text-align: start;
+      margin-left: 80px;
+      margin-top: 40px;
     }
   }
 
@@ -58,6 +90,7 @@
     @media (max-width: @mobile) {
       background-image: url("../img/index-can-mobile 1.png");
       margin-top: 29px;
+      margin-bottom: 3px;
       width: 280px;
       height: 270px;
       margin-left: auto;
@@ -70,6 +103,11 @@
       height: 609px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    @media (min-width: @desktop-min) {
+      margin-left: 448px;
+      margin-top: -312px;
     }
 
     background-repeat: no-repeat;

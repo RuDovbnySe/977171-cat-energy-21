@@ -1,14 +1,27 @@
 .instruction {
+  margin-top: 27px;
+
   &__tittle {
     font-family: "Oswald", "Arial", sans-serif;
     font-size: 36px;
     line-height: 111%;
     text-align: start;
     color: @basic-black;
+
+    @media (min-width: @tablet) {
+      font-size: 60px;
+      line-height: 100%;
+    }
   }
 
   &__item {
     display: flex;
+    margin-top: 20px;
+
+    @media (min-width: @tablet) {
+      display: block;
+      width: 230px;
+    }
   }
 
   &__text {
@@ -16,18 +29,28 @@
     line-height: 129%;
     color: @special_dark-grey;
     padding-left: 20px;
+
+    @media (min-width: @tablet) {
+      font-size: 16px;
+      line-height: 150%;
+      margin-top: 31px;
+      padding: 0;
+    }
   }
 
   &__list {
     list-style: none;
     padding-left: inherit;
+    margin: 0;
+    margin-top: 38px;
 
     @media (min-width: @tablet) {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      column-gap: 60px;
     }
 
-    @media (min-width: @desktop) {
+    @media (min-width: @desktop-min) {
       display: flex;
     }
   }
