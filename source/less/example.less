@@ -1,4 +1,8 @@
 .example {
+  @media (min-width: @tablet) {
+    border-top: 1px solid @grey-line;
+  }
+
   &__column {
     margin-top: 42px;
   }
@@ -18,6 +22,8 @@
 
   &__tittle {
     font-family: "Oswald", "Arial", sans-serif;
+    font-style: normal;
+    font-weight: normal;
     font-size: 36px;
     line-height: 111%;
     text-align: start;
@@ -55,17 +61,34 @@
     padding-left: inherit;
     display: flex;
     justify-content: space-between;
-  }
-
-  &__item {
-    width: 124px;
+    margin-right: -15px;
+    margin-left: -15px;
 
     @media (min-width: @tablet) {
-      margin-right: 42px;
+      width: 50%;
+      margin: 0;
+      margin-left: -20px;
     }
 
     @media (min-width: @desktop-min) {
-      margin-right: 0;
+      width: 100%;
+      margin-left: 0;
+    }
+  }
+
+  &__item {
+    width: 50%;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    @media (min-width: @tablet) {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
+    @media (min-width: @desktop-min) {
+      margin-right: 20px;
+      margin-left: 20px;
     }
 
     &-text {
@@ -76,17 +99,18 @@
       background-color: @grey-line;
       margin-left: auto;
       margin-right: auto;
+      padding-right: 10px;
+      padding-left: 10px;
 
       margin-top: 15px;
       width: min-content;
 
       @media (min-width: @tablet) {
         background-color: inherit;
+        margin: 0;
         margin-top: 18px;
-
-        br {
-          display: none;
-        }
+        padding: 0;
+        width: auto;
       }
     }
   }
@@ -115,7 +139,6 @@
     @media (min-width: @tablet) {
       display: flex;
       margin-top: 26px;
-      justify-content: space-between;
     }
 
     @media (min-width: @desktop-min) {
@@ -134,10 +157,6 @@
     text-align: center;
     text-transform: uppercase;
 
-    br {
-      display: none;
-    }
-
     color: @basic-black;
     margin-top: 34px;
 
@@ -145,18 +164,16 @@
       font-size: 20px;
       line-height: 100%;
       text-align: end;
-
-      br {
-        display: block;
-      }
+      width: 50%;
+      margin-top: 11px;
+      display: inline-grid;
     }
 
     @media (min-width: @desktop-min) {
-      br {
-        display: none;
-      }
-      text-align: justify;
+      display: flex;
       margin-top: 55px;
+      width: 100%;
+      justify-content: space-between;
     }
   }
 
@@ -179,6 +196,7 @@
 
     @media (min-width: @desktop-min) {
       margin-top: 205px;
+      background-color: @basic-grey;
     }
   }
 }
@@ -246,14 +264,14 @@
     text-align: center;
     text-transform: uppercase;
 
-    color: #000000;
+    color: @basic-black;
 
     border: none;
+    background-color: inherit;
 
     @media (min-width: @tablet) {
       font-size: 20px;
       line-height: 150%;
-      opacity: 0.4;
       border-bottom: 1px dotted @basic-black;
     }
   }
@@ -282,6 +300,7 @@
       margin-right: 14px;
       background-color: @range-control;
       width: 428px;
+      height: 6px;
     }
   }
 
@@ -295,13 +314,14 @@
     margin: 4px 6px;
 
     @media (min-width: @tablet) {
+      margin: 0;
       width: 34px;
       height: 34px;
       border-radius: 50%;
       border: 1px solid @range-control;
       background-color: @basic-white;
-      margin-top: -10px;
-      margin-left: 50%;
+      margin-top: -15px;
+      margin-left: calc(50% - 17px);
 
       &--center {
         border-radius: 50%;

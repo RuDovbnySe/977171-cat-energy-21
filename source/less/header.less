@@ -25,6 +25,7 @@
 
     @media (min-width: @tablet) {
       margin-left: 30px;
+      width: 174px;
     }
 
     @media (min-width: @desktop-min) {
@@ -36,47 +37,64 @@
     }
   }
 
-  &__logo--mobile,
-  &__logo--tablet,
-  &__logo--desktop {
-    display: none;
+  &__logo {
+    &--mobile,
+    &--tablet,
+    &--desktop {
+      display: none;
+    }
+
+    &--title {
+      @media (min-width: @desktop-min) {
+        margin-left: 15px;
+      }
+    }
   }
 
   @media (max-width: @mobile) {
-    &__logo--mobile {
-      display: block;
-    }
+    &__logo {
+      &--mobile {
+        display: block;
+      }
 
-    &__logo--tablet,
-    &__logo--desktop {
-      display: none;
+      &--tablet,
+      &--desktop {
+        display: none;
+      }
     }
   }
 
   @media (min-width: @tablet) {
-    &__logo--tablet {
-      display: block;
-    }
+    &__logo {
+      &--tablet {
+        display: block;
+      }
 
-    &__logo--mobile,
-    &__logo--desktop {
-      display: none;
+      &--mobile,
+      &--desktop {
+        display: none;
+      }
     }
   }
 
   @media (min-width: @desktop-min) {
-    &__logo--desktop {
-      display: block;
-    }
+    &__logo {
+      &--desktop {
+        display: block;
+      }
 
-    &__logo--mobile,
-    &__logo--tablet {
-      display: none;
+      &--mobile,
+      &--tablet {
+        display: none;
+      }
     }
   }
 
   &__toggle,
   &__toggle--close {
+    border: none;
+    background-color: inherit;
+
     @media (min-width: @tablet) {
       display: none;
     }
