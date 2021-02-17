@@ -21,13 +21,17 @@
   &--color {
     color: @basic-white;
     background-color: @basic-green;
+
+    @media (min-width: @desktop-min) {
+      height: 52px;
+    }
   }
 
   &--promo {
     @media (min-width: @tablet) {
       position: absolute;
       top: 230px;
-      left: 117px;
+      left: 72px;
       width: 244px;
       height: 54px;
     }

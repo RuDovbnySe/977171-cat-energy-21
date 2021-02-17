@@ -1,6 +1,10 @@
 .invitation {
   position: relative;
 
+  &__form {
+    background-color: @basic-grey;
+  }
+
   &__title {
     font-family: "Oswald", "Arial", sans-serif;
     font-style: normal;
@@ -15,13 +19,13 @@
     @media (min-width: @tablet) {
       font-size: 20px;
       line-height: 105%;
-      margin-left: 41px;
+      width: 175px;
     }
 
     @media (min-width: @desktop-min) {
       margin: 0;
       width: 50%;
-      padding-left: 76px;
+      padding-left: 75px;
     }
   }
 
@@ -34,8 +38,7 @@
     margin: 0;
 
     @media (min-width: @tablet) {
-      text-align: end;
-      margin-right: 41px;
+      width: 210px;
     }
 
     @media (min-width: @desktop-min) {
@@ -50,12 +53,9 @@
     margin: 0;
     padding-left: 20px;
 
-    @media (min-width: @tablet) {
-      padding-left: 180px;
-    }
-
     @media (min-width: @desktop-min) {
-      padding-left: 80px;
+      margin-right: 90px;
+      padding-left: 0;
     }
   }
 
@@ -64,40 +64,42 @@
     padding-left: 20px;
 
     @media (min-width: @tablet) {
-      padding-left: 180px;
       padding-top: 20px;
     }
 
     @media (min-width: @desktop-min) {
-      padding-left: 80px;
+      margin-right: 90px;
+      padding-left: 0;
     }
   }
 
   &__map {
-    background-image: url("../img/bg-map-mobile@1x.png");
-    background-repeat: no-repeat;
-    width: 100%;
-    min-width: 320px;
     height: 362px;
-    background-position: center;
-    background-size: 100% 362px;
 
-    position: relative;
+    &--box {
+      background-image: url("../img/bg-map-mobile@1x.png");
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: 100%;
 
-    @media (min-width: @tablet) {
-      background-image: url("../img/bg-map-tablet@1x.png");
-      width: 100vw;
-      height: 400px;
-      background-size: 100% 400px;
+      position: relative;
+
+      @media (min-width: @tablet) {
+        background-image: url("../img/bg-map-tablet@1x.png");
+      }
+
+      @media (min-width: @desktop-min) {
+        background-image: url("../img/bg-map-desktop@1x.png");
+      }
+
+      @media (min-width: @desktop) {
+        background-image: url("../img/bg-map-desktop@1x.png");
+      }
     }
 
-    @media (min-width: @desktop-min) {
-      background-image: url("../img/bg-map-desktop@1x.png");
-    }
 
-    @media (min-width: @desktop) {
-      background-image: url("../img/bg-map-desktop@1x.png");
-    }
 
     &--iframe {
       background-image: url("../img/map-pin-mobile.png");
@@ -134,6 +136,8 @@
     @media (min-width: @tablet) {
       height: 201px;
       align-items: center;
+      display: flex;
+      justify-content: space-between;
     }
 
     @media (min-width: @desktop-min) {
@@ -141,7 +145,7 @@
       top: 55px;
       left: 110px;
       background-color: @basic-white;
-      width: 510px;
+      width: 570px;
       height: 201px;
       padding: 0;
       z-index: 1;

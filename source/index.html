@@ -3,14 +3,15 @@
 <head>
   <meta charset="utf-8">
   <title>Кэт энерджи</title>
+  <link rel="icon" href="img/favicon.ico">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body class="page__body">
 <header class="header">
-  <div class="container container__header">
-    <div class="header__top header__top--wrapper">
+  <div class="container header__wrapper">
+    <div class="header__top">
       <a class="header__top--link">
         <svg class="header__logo header__logo--mobile" width="34" height="38" viewBox="0 0 34 38" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">
@@ -99,8 +100,6 @@
         </svg>
       </button>
     </div>
-  </div>
-  <div class="container container__header">
     <nav class="header__nav">
       <div class="header__nav--wrapper">
         <ul class="header__nav--list site-list">
@@ -120,16 +119,15 @@
 </header>
 <main class="page-main">
   <div class="promo">
-    <div class="container">
+    <div class="promo__background"></div>
+    <div class="container promo__wrapper">
       <h1 class="promo__tittle promo__tittle--text">Функциональное питание для котов</h1>
       <p class="promo__text">Занялся собой? Занимайся котом!</p>
       <div class="promo__img">
       </div>
-    </div>
-    <div class="container">
       <button class="btn btn--color btn--promo" type="button">
-        Подобрать программу
-      </button>
+      Подобрать программу
+    </button>
     </div>
   </div>
   <div class="container">
@@ -306,16 +304,20 @@
     </div>
   </div>
   <section class="invitation">
-    <div class="container invitation__box">
-      <h2 class="invitation__title">Приглашаем<br> к сотрудничеству<br> дилеров!</h2>
-      <div class="invitation__text">
-        <p class="invitation__street">ул. Большая Конюшенная, д. 19/8</p>
-        <p class="invitation__city">Санкт-Петербург</p>
+    <div class="container">
+      <div class="invitation__box">
+        <h2 class="invitation__title">Приглашаем<br> к сотрудничеству<br> дилеров!</h2>
+        <div class="invitation__text">
+          <p class="invitation__street">ул. Большая Конюшенная, д. 19/8</p>
+          <p class="invitation__city">Санкт-Петербург</p>
+        </div>
       </div>
     </div>
   </section>
   <div class="invitation__map">
-    <div class="invitation__map--iframe"></div>
+    <div class="invitation__map--box">
+      <div class="invitation__map--iframe"></div>
+    </div>
   </div>
 </main>
 <footer class="page-footer">
